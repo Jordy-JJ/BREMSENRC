@@ -1,0 +1,1278 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="BREMSENRC CDMX - Taller mecánico especializado en frenos, afinaciones, suspensión, embrague y rectificado. Venta e instalación de balatas y discos premium.">
+  <meta name="theme-color" content="#000000">
+  <title>BREMSENRC | Frenos y taller mecánico en CDMX</title>
+  <style>
+
+:root{
+  --bg:#000;--panel:#0b0b0c;--panel2:#141416;--line:rgba(255,255,255,.12);
+  --red:#f31616;--red2:#b90000;--white:#f7f7f7;--muted:#a4a4a8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif;line-height:1.45}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{width:min(1180px,calc(100% - 36px));margin:auto}
+h1,h2,h3,h4,.brand-text{font-family:"Arial Narrow",Impact,Arial,sans-serif}
+h1,h2,h3{margin:0;text-transform:uppercase;line-height:.95}
+h1{font-size:clamp(4rem,7vw,7.25rem);font-style:italic;letter-spacing:-.035em}
+h2{font-size:clamp(2rem,3.8vw,3.6rem);font-style:italic}
+h3{font-size:2rem}
+h4{margin:12px 0 0;font-size:1.4rem}
+em{color:var(--red);font-style:italic}
+p{color:#c7c7ca}
+.kicker{display:block;color:var(--red);font-size:.72rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin-bottom:9px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border:1px solid transparent;text-transform:uppercase;font-size:.74rem;font-weight:900;letter-spacing:.03em;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:linear-gradient(135deg,var(--red),#c40000);color:#fff}
+.btn-outline{border-color:#e9e9e9;background:transparent;color:#fff}
+.btn-large{min-height:58px;padding-inline:28px}
+
+.topbar{position:sticky;top:0;z-index:100;background:rgba(0,0,0,.95);border-bottom:1px solid rgba(255,255,255,.07);backdrop-filter:blur(15px)}
+.nav{height:78px;display:flex;align-items:center;gap:26px}
+.brand{width:195px;flex:none}
+.brand img{height:58px;object-fit:contain}
+.menu{flex:1;display:flex;justify-content:center;gap:27px}
+.menu a{font-size:.69rem;text-transform:uppercase;font-weight:800;color:#ddd;position:relative}
+.menu a:after{content:"";position:absolute;left:0;right:100%;bottom:-12px;height:2px;background:var(--red);transition:.2s}
+.menu a:hover:after,.menu a.active:after{right:0}
+.nav-wa{min-width:112px}
+.menuBtn{display:none}
+
+.hero{background:
+  radial-gradient(circle at 75% 42%,rgba(243,22,22,.11),transparent 32%),
+  linear-gradient(115deg,#020202,#111 55%,#030303);border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:.95fr 1.05fr;min-height:620px;align-items:center;gap:35px;padding:45px 0}
+.hero-copy{z-index:3}
+.hero-copy p{max-width:600px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.hero-media{position:relative;height:520px}
+.car-panel{position:absolute;inset:65px 150px 55px 0;overflow:hidden;border-radius:2px}
+.car-panel:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0008,transparent 32%),linear-gradient(0deg,#0009,transparent 45%)}
+.car-panel img{filter:saturate(.8) contrast(1.06)}
+.brake-panel{position:absolute;right:0;top:20px;width:54%;height:88%;filter:drop-shadow(0 30px 35px #000)}
+.brake-panel img{object-fit:contain;transform:rotate(-2deg)}
+.stats{background:linear-gradient(90deg,#121214,#202023,#111113);border-top:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stats-grid>div{padding:22px 24px;border-right:1px solid var(--line)}
+.stats-grid>div:last-child{border-right:0}
+.stats b{display:block;color:var(--red);text-transform:uppercase;font-size:1rem}
+.stats span{display:block;color:#ddd;font-size:.69rem;text-transform:uppercase;margin-top:3px}
+
+.section{padding:72px 0}
+.section.compact{padding-top:55px}
+.split-head{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.split-head h2{font-size:1.8rem;font-style:normal;letter-spacing:.01em}
+.split-head.mini h2{font-size:1.4rem}
+.red-line{width:28px;height:3px;background:var(--red);display:block}
+
+.products-combo{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.product-card{background:#121214;border:1px solid var(--line);min-height:190px;display:flex;flex-direction:column;overflow:hidden}
+.product-card img{height:125px}
+.product-card>div{padding:12px 12px 13px}
+.product-card b{display:block;font-family:"Arial Narrow",Impact,Arial,sans-serif;font-size:1.15rem;text-transform:uppercase}
+.product-card span{font-size:.67rem;color:#a7a7aa}
+.product-cta{grid-column:1/-1;justify-self:center;margin-top:4px}
+.premium-card{position:relative;overflow:hidden;background:linear-gradient(130deg,#160202,#080808);border:1px solid var(--line);min-height:485px}
+.premium-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 48%,rgba(243,22,22,.22),transparent 36%)}
+.premium-copy{position:relative;z-index:2;width:58%;padding:34px}
+.premium-card h3{font-size:3rem}
+.premium-card ul{list-style:none;padding:0;margin:24px 0}
+.premium-card li{position:relative;padding:7px 0 7px 22px;color:#ddd;font-size:.88rem}
+.premium-card li:before{content:"✓";position:absolute;left:0;color:var(--red);font-weight:900}
+.premium-card>img{position:absolute;right:-6%;bottom:-3%;width:58%;height:88%;object-fit:contain}
+
+.services{background:linear-gradient(#090909,#050505)}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.service-card{position:relative;height:260px;border:1px solid var(--line);overflow:hidden;background:#0a0a0b}
+.service-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#050505 0 36%,transparent 72%)}
+.service-card img{filter:saturate(.85);transition:.3s}
+.service-card:hover img{transform:scale(1.03)}
+.service-card>div{position:absolute;z-index:2;left:18px;right:18px;bottom:16px}
+.service-card b{display:block;font-family:"Arial Narrow",Impact,Arial,sans-serif;font-size:1.45rem;text-transform:uppercase}
+.service-card span{font-size:.68rem;color:#c7c7c7}
+
+.brands{padding:34px 0;background:#030303;border-block:1px solid var(--line)}
+.brand-row{display:grid;grid-template-columns:repeat(6,1fr);align-items:center;gap:10px}
+.brand-text{display:grid;place-items:center;min-height:70px;font-size:1.75rem;font-style:italic;font-weight:800;text-align:center}
+.brand-text.red{color:#e01818}
+.brand-text.blue{color:#2f57d9}
+.brand-text.yellow{color:#ffd928;background:#111}
+.brand-text.white{color:#eee}
+
+.providers{background:linear-gradient(#080808,#050505)}
+.provider-head{display:grid;grid-template-columns:1fr .8fr;gap:40px;align-items:end;margin-bottom:24px}
+.provider-head p{margin:0}
+.provider-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.provider-card{height:380px;position:relative;overflow:hidden;border:1px solid var(--line)}
+.provider-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#000 0 32%,transparent 70%)}
+.provider-overlay{position:absolute;z-index:2;left:24px;right:24px;bottom:20px}
+.provider-overlay span{font-size:.75rem;font-weight:900;color:var(--red);letter-spacing:.14em}
+.provider-overlay h3{margin:5px 0;font-size:2rem}
+.provider-overlay p{margin:0;max-width:470px;font-size:.82rem}
+.provider-mini-grid{display:grid;grid-template-columns:1.25fr .75fr .75fr;gap:10px;margin-top:10px}
+.provider-mini-grid figure{margin:0;height:200px;overflow:hidden;border:1px solid var(--line)}
+
+.workshop{background:#050505}
+.work-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;grid-template-rows:240px 240px;gap:10px}
+.work-grid figure{margin:0;overflow:hidden;border:1px solid var(--line)}
+.work-big{grid-row:1/3}
+.work-grid figure:nth-child(4){grid-column:2/4}
+.work-grid img{transition:.3s}
+.work-grid figure:hover img{transform:scale(1.03)}
+
+.location{padding:52px 0;background:linear-gradient(100deg,#0b0b0d,#161618);border-block:1px solid var(--line)}
+.location-grid{display:grid;grid-template-columns:1fr .75fr 1fr;gap:28px;align-items:center}
+.location-info h2{font-size:2.5rem}
+.phone-list{display:flex;flex-direction:column;gap:6px;margin:16px 0}
+.phone-list a{font-weight:800}
+.phone-list a:hover{color:var(--red)}
+.location-actions{display:flex;gap:9px;flex-wrap:wrap}
+.hours h3{margin-bottom:16px}
+.hours>div{display:grid;grid-template-columns:1fr auto;gap:15px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.84rem}
+.hours span{color:#aaa}.hours small{grid-column:1/-1;color:var(--red);text-align:right}
+.map-card{height:270px;position:relative;background:#efefef;overflow:hidden;border-radius:4px}
+.map-bg{position:absolute;inset:-20%;background:
+  linear-gradient(30deg,transparent 48%,#c7c7c7 49% 51%,transparent 52%) 0 0/120px 100px,
+  linear-gradient(102deg,transparent 48%,#d1d1d1 49% 51%,transparent 52%) 0 0/160px 130px,
+  linear-gradient(#f2f2f2,#dfdfdf)}
+.pin{position:absolute;left:52%;top:45%;color:var(--red);font-size:2.7rem;transform:translate(-50%,-50%)}
+.map-label{position:absolute;left:52%;top:58%;transform:translateX(-50%);background:#fff;color:#222;padding:6px 9px;border-radius:4px;font-size:.72rem;font-weight:800}
+
+.socials{background:#040404}
+.social-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.social-box{border:1px solid var(--line);background:#0d0d0f;padding:16px;display:grid;grid-template-columns:.5fr 1.5fr;gap:16px;align-items:center}
+.social-box b{font-family:"Arial Narrow",Impact,Arial,sans-serif;font-size:1.5rem;text-transform:uppercase}
+.social-box span{display:block;color:#aaa;font-size:.78rem}
+.social-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.social-thumbs img{height:88px}
+
+.final-cta{padding:45px 0;background:
+  radial-gradient(circle at 75% 50%,rgba(243,22,22,.26),transparent 28%),
+  linear-gradient(100deg,#090909,#190303)}
+.final-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.final-grid h2{font-size:2.25rem}
+.final-actions{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end}
+
+footer{padding:40px 0 18px;background:#010101}
+.footer-grid{display:grid;grid-template-columns:1.7fr repeat(3,1fr);gap:35px}
+.footer-grid>img{width:190px;height:68px;object-fit:contain}
+.footer-grid>div{display:flex;flex-direction:column;gap:7px;font-size:.72rem}
+.footer-grid b{text-transform:uppercase}
+.footer-grid a{color:#999}
+.footer-bottom{margin-top:25px;padding-top:14px;border-top:1px solid var(--line);font-size:.66rem;color:#666}
+.floating-wa{position:fixed;right:22px;bottom:22px;z-index:90;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#20c65a;color:#fff;font-weight:900;box-shadow:0 14px 30px #0008}
+.reveal{opacity:0;transform:translateY(20px);transition:.6s ease}.reveal.on{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .menuBtn{display:block;margin-left:auto;background:none;border:0;color:white;font-size:1.5rem}
+  .menu{position:fixed;top:78px;left:0;right:0;background:#050505;flex-direction:column;align-items:stretch;padding:22px 28px;transform:translateY(-130%);transition:.3s;z-index:90}
+  .menu.open{transform:none}
+  .nav-wa{display:none}
+  .hero-grid{grid-template-columns:1fr;min-height:auto;padding-top:70px}
+  .hero-media{height:430px}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .products-combo{grid-template-columns:1fr}
+  .service-grid{grid-template-columns:1fr 1fr}
+  .brand-row{grid-template-columns:repeat(3,1fr)}
+  .provider-head{grid-template-columns:1fr}
+  .provider-grid{grid-template-columns:1fr}
+  .provider-mini-grid{grid-template-columns:1fr 1fr}
+  .provider-mini-grid figure:first-child{grid-column:1/-1}
+  .work-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .work-big{grid-row:auto}
+  .work-grid figure{height:280px}
+  .work-grid figure:nth-child(4){grid-column:auto}
+  .location-grid{grid-template-columns:1fr}
+  .final-grid{grid-template-columns:1fr}
+  .final-actions{justify-content:flex-start}
+}
+@media(max-width:620px){
+  .wrap{width:min(100% - 24px,1180px)}
+  .nav{height:68px}.brand{width:158px}.brand img{height:48px}.menu{top:68px}
+  h1{font-size:3.7rem}
+  .hero-grid{padding-top:42px}
+  .hero-media{height:330px}
+  .car-panel{inset:55px 80px 30px 0}
+  .brake-panel{width:58%}
+  .hero-actions .btn{width:100%}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stats-grid>div{padding:16px 12px}
+  .section{padding:55px 0}
+  .product-grid{grid-template-columns:1fr 1fr}
+  .premium-card{min-height:520px}
+  .premium-copy{width:72%;padding:24px}
+  .premium-card h3{font-size:2.5rem}
+  .premium-card>img{width:68%;height:72%;right:-15%}
+  .service-grid{grid-template-columns:1fr}
+  .brand-row{grid-template-columns:1fr 1fr}
+  .provider-mini-grid{grid-template-columns:1fr}
+  .provider-mini-grid figure:first-child{grid-column:auto}
+  .work-grid{grid-template-columns:1fr}
+  .social-row{grid-template-columns:1fr}
+  .social-box{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-grid>img{grid-column:1/-1}
+}
+
+</style>
+<style id="hero-v4-overrides">
+.hero-v4{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 46%,rgba(243,22,22,.17),transparent 28%),radial-gradient(circle at 60% 20%,rgba(255,255,255,.035),transparent 25%),linear-gradient(110deg,#000 0%,#080808 43%,#101011 73%,#000 100%);border-bottom:1px solid var(--line)}
+.hero-v4:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px) 0 0/58px 58px,linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px) 0 0/58px 58px}
+.hero-v4-grid{position:relative;z-index:2;min-height:650px;display:grid;grid-template-columns:.93fr 1.07fr;align-items:center;gap:34px;padding:48px 0 42px}
+.hero-v4-copy{position:relative;z-index:4;padding-left:4px}.hero-v4-kicker{display:flex;align-items:center;gap:10px;margin-bottom:15px;color:#d9d9db;font-size:.7rem;letter-spacing:.15em;font-weight:900}.hero-v4-kicker span{width:34px;height:2px;background:var(--red)}
+.hero-v4-copy h1{font-size:clamp(4.35rem,7.1vw,7.55rem);line-height:.86;letter-spacing:-.035em;text-shadow:0 14px 40px rgba(0,0,0,.38)}.hero-v4-copy h1 em{display:inline-block;color:var(--red)}.hero-v4-copy h4{margin:18px 0 6px;font-size:1.45rem;color:#fff}.hero-v4-copy>p{max-width:590px;margin:0;font-size:.93rem;color:#c9c9cd}
+.hero-v4-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.hero-main-btn{min-width:210px;box-shadow:0 13px 34px rgba(243,22,22,.2)}
+.hero-v4-visual{position:relative;min-height:545px}.hero-v4-glow{position:absolute;right:4%;top:11%;width:72%;height:74%;border-radius:50%;background:radial-gradient(circle,rgba(243,22,22,.16),rgba(243,22,22,.04) 42%,transparent 68%);filter:blur(8px)}
+.hero-v4-car{position:absolute;left:0;top:13%;width:78%;height:73%;overflow:hidden;clip-path:polygon(4% 6%,100% 0,94% 100%,0 93%);box-shadow:0 30px 70px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.1)}.hero-v4-car:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.46),transparent 35%),linear-gradient(0deg,rgba(0,0,0,.62),transparent 42%)}.hero-v4-car img{object-position:center 56%;transform:scale(1.06);filter:saturate(.82) contrast(1.08) brightness(.86)}
+.hero-v4-brake{position:absolute;right:-3%;top:10%;width:48%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.15);box-shadow:0 26px 55px rgba(0,0,0,.62),0 0 45px rgba(243,22,22,.15);background:#111}.hero-v4-brake img{object-fit:cover;transform:scale(1.05);filter:contrast(1.08) saturate(.92)}
+.hero-v4-badge{position:absolute;left:7%;bottom:2%;width:245px;min-height:92px;display:flex;align-items:center;gap:12px;padding:12px 14px;background:rgba(5,5,5,.88);border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 45px rgba(0,0,0,.45)}.hero-v4-badge img{width:68px;height:68px;object-fit:contain}.hero-v4-badge span{color:#d9d9d9;font-size:.63rem;line-height:1.45;font-weight:800;letter-spacing:.08em}
+.hero-v4-bottom{position:relative;z-index:3;background:linear-gradient(90deg,#141416,#202023 48%,#111113);border-top:1px solid var(--line)}.hero-v4-bottom-grid{display:grid;grid-template-columns:repeat(4,1fr)}.hero-benefit{min-height:78px;display:flex;align-items:center;gap:13px;padding:14px 24px;border-right:1px solid var(--line)}.hero-benefit:last-child{border-right:0}.hero-icon{width:36px;height:36px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);border-radius:50%;color:#fff;font-size:.64rem;font-weight:900}.hero-benefit div{display:flex;flex-direction:column}.hero-benefit b{color:var(--red);font-size:.92rem;text-transform:uppercase}.hero-benefit small{color:#eee;font-size:.64rem;text-transform:uppercase}
+@media(max-width:980px){.hero-v4-grid{grid-template-columns:1fr;min-height:auto;padding-top:70px}.hero-v4-visual{min-height:470px}.hero-v4-bottom-grid{grid-template-columns:1fr 1fr}.hero-benefit:nth-child(2){border-right:0}.hero-benefit:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:620px){.hero-v4-grid{padding:42px 0 22px}.hero-v4-copy h1{font-size:3.75rem}.hero-v4-actions .btn{width:100%}
+.hero-v4-visual{min-height:350px}.hero-v4-car{left:-7%;top:16%;width:88%;height:70%}.hero-v4-brake{right:-11%;top:7%;width:54%}.hero-v4-badge{left:2%;bottom:0;width:215px}.hero-v4-bottom-grid{grid-template-columns:1fr 1fr}.hero-benefit{padding:12px 11px;gap:8px}.hero-icon{width:30px;height:30px}.hero-benefit b{font-size:.77rem}.hero-benefit small{font-size:.54rem}}
+</style>
+
+<style>
+/* MARCAS V4.2 */
+.brands-v42{
+  padding:38px 0 42px;
+  background:
+    radial-gradient(circle at 72% 20%,rgba(255,255,255,.025),transparent 30%),
+    #020202;
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.1);
+  overflow:hidden;
+}
+.brands-v42 .split-head{margin-bottom:24px}
+.brand-logo-row{
+  display:grid;
+  grid-template-columns:1.18fr .82fr 1.1fr 1.15fr .9fr 1.2fr;
+  align-items:center;
+  gap:22px;
+}
+.brand-logo{
+  height:102px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  background:#050505;
+}
+.brand-logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.brand-brembo img{
+  transform:scale(1.02);
+}
+.brand-ebc{
+  background:#302583;
+}
+.brand-ebc img{
+  object-fit:contain;
+}
+.brand-textar{
+  background:#ffea00;
+}
+.brand-textar img{
+  object-fit:contain;
+}
+.brand-akebono{
+  background:#0f79b4;
+}
+.brand-best,
+.brand-fricco{
+  background:#000;
+}
+.brand-fricco img{
+  transform:scale(.92);
+}
+@media(max-width:980px){
+  .brand-logo-row{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:620px){
+  .brand-logo-row{grid-template-columns:1fr 1fr;gap:10px}
+  .brand-logo{height:82px}
+}
+</style>
+
+
+<style>
+/* ===== UBICACION V4.3 ===== */
+.location-v43{
+  padding:62px 0 26px;
+  background:
+    radial-gradient(circle at 82% 18%,rgba(243,22,22,.08),transparent 24%),
+    linear-gradient(180deg,#101012,#070708);
+  border-top:1px solid rgba(255,255,255,.09);
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+.location-v43-head{
+  display:grid;
+  grid-template-columns:1fr .7fr;
+  gap:40px;
+  align-items:end;
+  margin-bottom:25px;
+}
+.location-v43-head h2{
+  font-size:clamp(2.2rem,4vw,3.7rem);
+}
+.location-v43-head p{
+  margin:0 0 6px;
+  max-width:520px;
+}
+.location-v43-grid{
+  display:grid;
+  grid-template-columns:.92fr .9fr 1.35fr;
+  gap:14px;
+  align-items:stretch;
+}
+.location-v43-card,
+.location-v43-map{
+  min-height:360px;
+  background:#0d0d0f;
+  border:1px solid rgba(255,255,255,.11);
+}
+.location-v43-card{
+  padding:28px;
+}
+.location-v43-label{
+  color:#fff;
+  font-family:"Arial Narrow",Impact,Arial,sans-serif;
+  font-size:1.15rem;
+  font-weight:900;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+.location-v43-main{
+  position:relative;
+  overflow:hidden;
+}
+.location-v43-main:before{
+  content:"";
+  position:absolute;
+  width:170px;
+  height:170px;
+  right:-70px;
+  top:-70px;
+  border-radius:50%;
+  border:22px solid rgba(243,22,22,.08);
+}
+.location-v43-main h3{
+  font-size:2.5rem;
+  color:#fff;
+  margin-bottom:10px;
+}
+.location-v43-main>p{
+  margin:0 0 20px;
+}
+.location-v43-contact{
+  display:grid;
+  gap:8px;
+  margin:20px 0 24px;
+}
+.location-v43-contact a{
+  background:#151517;
+  border:1px solid rgba(255,255,255,.08);
+  padding:12px 14px;
+  transition:.2s;
+}
+.location-v43-contact a:hover{
+  border-color:rgba(243,22,22,.55);
+  transform:translateX(2px);
+}
+.location-v43-contact span{
+  display:block;
+  color:#8d8d91;
+  text-transform:uppercase;
+  font-size:.6rem;
+  letter-spacing:.08em;
+  margin-bottom:3px;
+}
+.location-v43-contact b{
+  font-size:1rem;
+}
+.location-v43-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.location-v43-hours{
+  display:flex;
+  flex-direction:column;
+}
+.schedule-row{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:16px;
+  padding:15px 0;
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+.schedule-row span{
+  display:block;
+  color:#fff;
+  font-size:.82rem;
+  font-weight:700;
+}
+.schedule-row small{
+  display:block;
+  margin-top:3px;
+  color:#7d7d81;
+  font-size:.63rem;
+}
+.schedule-row b{
+  font-size:.78rem;
+  white-space:nowrap;
+}
+.schedule-row.sunday small{
+  color:var(--red);
+}
+.open-note{
+  margin-top:auto;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding-top:18px;
+  color:#a5a5a8;
+  font-size:.69rem;
+  text-transform:uppercase;
+}
+.open-note span{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#20c65a;
+  box-shadow:0 0 12px rgba(32,198,90,.5);
+}
+.location-v43-map{
+  position:relative;
+  overflow:hidden;
+  min-height:360px;
+}
+.location-v43-map iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+  filter:grayscale(.15) contrast(1.02);
+}
+.location-v43-mapbar{
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  min-height:66px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:12px 14px;
+  background:rgba(5,5,5,.92);
+  border:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(10px);
+}
+.location-v43-mapbar b{
+  display:block;
+  font-size:.79rem;
+}
+.location-v43-mapbar span{
+  display:block;
+  margin-top:2px;
+  color:#8e8e92;
+  font-size:.62rem;
+}
+.location-v43-mapbar a{
+  color:var(--red);
+  font-size:.65rem;
+  font-weight:900;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.location-v43-bottom{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  margin-top:14px;
+  background:#0b0b0c;
+  border:1px solid rgba(255,255,255,.09);
+}
+.location-v43-bottom>div{
+  padding:15px 18px;
+  border-right:1px solid rgba(255,255,255,.09);
+}
+.location-v43-bottom>div:last-child{border-right:0}
+.location-v43-bottom b{
+  display:block;
+  color:var(--red);
+  font-size:.72rem;
+  text-transform:uppercase;
+}
+.location-v43-bottom span{
+  display:block;
+  color:#9b9b9f;
+  font-size:.61rem;
+  margin-top:2px;
+}
+@media(max-width:980px){
+  .location-v43-head{grid-template-columns:1fr}
+  .location-v43-grid{grid-template-columns:1fr 1fr}
+  .location-v43-map{grid-column:1/-1;min-height:410px}
+  .location-v43-bottom{grid-template-columns:1fr 1fr}
+  .location-v43-bottom>div:nth-child(2){border-right:0}
+  .location-v43-bottom>div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.09)}
+}
+@media(max-width:620px){
+  .location-v43{padding-top:50px}
+  .location-v43-grid{grid-template-columns:1fr}
+  .location-v43-map{grid-column:auto;min-height:360px}
+  .location-v43-card{padding:22px}
+  .location-v43-bottom{grid-template-columns:1fr 1fr}
+  .location-v43-bottom>div{padding:13px 11px}
+  .location-v43-actions .btn{width:100%}
+}
+</style>
+
+
+<style>
+/* ===== HEADER LOGO V4.4 ===== */
+.topbar .nav{
+  min-height:88px;
+  height:88px;
+}
+.topbar .brand{
+  width:250px !important;
+  flex:0 0 250px !important;
+  display:flex;
+  align-items:center;
+}
+.topbar .brand img{
+  width:100% !important;
+  height:72px !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+}
+@media(max-width:980px){
+  .topbar .brand{
+    width:210px !important;
+    flex-basis:210px !important;
+  }
+  .topbar .brand img{
+    height:64px !important;
+  }
+}
+@media(max-width:620px){
+  .topbar .nav{
+    min-height:74px;
+    height:74px;
+  }
+  .topbar .brand{
+    width:185px !important;
+    flex-basis:185px !important;
+  }
+  .topbar .brand img{
+    height:58px !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== LOGOS INTEGRADOS V4.5 ===== */
+.topbar .brand{
+  width:270px !important;
+  flex:0 0 270px !important;
+}
+.topbar .brand img{
+  width:100% !important;
+  height:78px !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+}
+
+/* Brand strip consistency */
+.brand-best img{
+  transform:scale(1.18);
+}
+.brand-fricco img{
+  transform:scale(1.02);
+}
+
+/* Provider cards */
+.provider-brand-logo{
+  display:block;
+  width:auto;
+  max-width:210px;
+  height:58px;
+  object-fit:contain;
+  object-position:left center;
+  margin-bottom:8px;
+  background:transparent;
+}
+.best-provider-logo{
+  height:64px;
+  max-width:220px;
+}
+.fricco-provider-logo{
+  height:60px;
+  max-width:230px;
+}
+
+/* Footer logo */
+footer .footer-grid > img,
+footer .footer-brand img{
+  width:230px !important;
+  height:82px !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+}
+
+@media(max-width:980px){
+  .topbar .brand{
+    width:225px !important;
+    flex-basis:225px !important;
+  }
+  .topbar .brand img{
+    height:68px !important;
+  }
+}
+@media(max-width:620px){
+  .topbar .brand{
+    width:195px !important;
+    flex-basis:195px !important;
+  }
+  .topbar .brand img{
+    height:60px !important;
+  }
+  .provider-brand-logo{
+    max-width:180px;
+    height:52px;
+  }
+}
+</style>
+
+
+<style>
+/* ===== HEADER LOGO V4.6 ===== */
+.topbar .nav{
+  height:104px !important;
+  min-height:104px !important;
+  align-items:center !important;
+}
+
+.topbar .brand{
+  width:330px !important;
+  flex:0 0 330px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+}
+
+.topbar .brand img{
+  width:100% !important;
+  height:92px !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+  transform:scale(1.03);
+  transform-origin:left center;
+}
+
+.topbar .menu{
+  gap:24px !important;
+}
+
+.topbar .menu a{
+  font-size:.72rem !important;
+}
+
+.topbar .nav-wa{
+  min-width:125px !important;
+  min-height:50px !important;
+}
+
+@media(max-width:1100px){
+  .topbar .brand{
+    width:275px !important;
+    flex-basis:275px !important;
+  }
+  .topbar .brand img{
+    height:82px !important;
+  }
+  .topbar .menu{
+    gap:18px !important;
+  }
+}
+
+@media(max-width:980px){
+  .topbar .nav{
+    height:88px !important;
+    min-height:88px !important;
+  }
+  .topbar .brand{
+    width:245px !important;
+    flex-basis:245px !important;
+  }
+  .topbar .brand img{
+    height:74px !important;
+  }
+}
+
+@media(max-width:620px){
+  .topbar .nav{
+    height:78px !important;
+    min-height:78px !important;
+  }
+  .topbar .brand{
+    width:205px !important;
+    flex-basis:205px !important;
+  }
+  .topbar .brand img{
+    height:64px !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== PRODUCTOS DESTACADOS FINAL ===== */
+.product-campaign{
+  background:
+    radial-gradient(circle at 75% 18%,rgba(243,22,22,.08),transparent 28%),
+    linear-gradient(180deg,#050505,#0b0b0d);
+}
+.product-campaign-intro{
+  max-width:720px;
+  margin:-7px 0 24px;
+}
+.product-campaign-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+.campaign-card{
+  position:relative;
+  min-height:335px;
+  margin:0;
+  overflow:hidden;
+  background:#0b0b0d;
+  border:1px solid rgba(255,255,255,.1);
+}
+.campaign-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.35s ease;
+}
+.campaign-card:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,rgba(0,0,0,.94) 0 23%,transparent 57%);
+  pointer-events:none;
+}
+.campaign-card:hover img{
+  transform:scale(1.035);
+}
+.campaign-card-copy{
+  position:absolute;
+  z-index:2;
+  left:17px;
+  right:17px;
+  bottom:15px;
+}
+.campaign-card-copy b{
+  display:block;
+  color:#fff;
+  font-family:"Arial Narrow",Impact,Arial,sans-serif;
+  font-size:1.28rem;
+  text-transform:uppercase;
+}
+.campaign-card-copy span{
+  display:block;
+  margin-top:3px;
+  color:#a8a8ac;
+  font-size:.68rem;
+}
+.campaign-featured{
+  border-color:rgba(243,22,22,.48);
+  box-shadow:0 0 36px rgba(243,22,22,.08);
+}
+.campaign-cta{
+  margin-top:16px;
+  padding:22px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+  background:linear-gradient(100deg,#111113,#220505);
+  border:1px solid rgba(255,255,255,.1);
+}
+.campaign-cta h3{
+  margin:0;
+  font-size:1.8rem;
+}
+@media(max-width:980px){
+  .product-campaign-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:620px){
+  .product-campaign-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .campaign-card{min-height:275px}
+  .campaign-card-copy{left:12px;right:12px;bottom:12px}
+  .campaign-card-copy b{font-size:1rem}
+  .campaign-card-copy span{font-size:.59rem}
+  .campaign-cta{flex-direction:column;align-items:flex-start}
+  .campaign-cta .btn{width:100%}
+}
+</style>
+
+</head>
+<body style="margin:0;background:#000;color:#fff;">
+
+<header class="topbar" id="inicio">
+  <div class="wrap nav">
+    <a class="brand" href="#inicio"><img src="assets/img/embedded/img-001.png" alt="BREMSENRC"></a>
+    <button class="menuBtn" aria-label="Abrir menú">☰</button>
+    <nav class="menu">
+      <a class="active" href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#taller">Nosotros</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-red nav-wa" href="https://wa.me/525519529261" target="_blank">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero hero-v4">
+  <div class="wrap hero-v4-grid">
+    <div class="hero-v4-copy reveal">
+      <div class="hero-v4-kicker"><span></span>TALLER MECANICO · ESPECIALISTAS EN FRENOS</div>
+      <h1>POTENCIA,<br>SEGURIDAD Y<br><em>CONFIANZA</em></h1>
+      <h4>Mas que frenos, tu seguridad.</h4>
+      <p>Venta e instalacion de balatas y discos premium, servicio mecanico y soluciones de alto rendimiento para tu vehiculo.</p>
+      <div class="hero-v4-actions">
+        <a class="btn btn-red hero-main-btn" href="https://wa.me/525519529261?text=Hola%20BREMSENRC,%20quiero%20cotizar%20un%20servicio." target="_blank">Cotizar por WhatsApp</a>
+        <a class="btn btn-outline" href="#servicios">Ver servicios</a>
+        <a class="btn btn-outline" href="#ubicacion">Como llegar</a>
+      </div>
+      </div>
+
+      <div class="hero-v4-visual reveal">
+      <div class="hero-v4-glow"></div>
+      <div class="hero-v4-car"><img src="assets/img/embedded/img-002.jpg" alt="Vehiculo atendido en BREMSENRC"></div>
+      <div class="hero-v4-brake"><img src="assets/img/embedded/img-003.jpg" alt="Disco de freno premium"></div>
+      <div class="hero-v4-badge"><img src="assets/img/embedded/img-004.png" alt=""><span>FRENOS · PERFORMANCE · TALLER</span></div>
+    </div>
+  </div>
+  <div class="hero-v4-bottom"><div class="wrap hero-v4-bottom-grid">
+    <div class="hero-benefit"><span class="hero-icon">01</span><div><b>+10,000</b><small>Refacciones para frenos</small></div></div>
+    <div class="hero-benefit"><span class="hero-icon">02</span><div><b>CALIDAD</b><small>Componentes premium</small></div></div>
+    <div class="hero-benefit"><span class="hero-icon">03</span><div><b>INSTALACION</b><small>Servicio especializado</small></div></div>
+    <div class="hero-benefit"><span class="hero-icon">04</span><div><b>DOMICILIO</b><small>Consulta cobertura</small></div></div>
+  </div></div>
+</section>
+
+  <!-- PRODUCTOS / PREMIUM -->
+  <section class="section compact" id="productos">
+    <div class="wrap">
+      <div class="split-head">
+        <h2>NUESTROS PRODUCTOS</h2>
+        <span class="red-line"></span>
+      </div>
+
+      <div class="products-combo">
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <img src="assets/img/embedded/img-005.jpg" alt="Balatas">
+            <div><b>Balatas</b><span>Uso diario y alto desempeño</span></div>
+          </article>
+          <article class="product-card reveal">
+            <img src="assets/img/embedded/img-006.jpg" alt="Discos de freno">
+            <div><b>Discos de freno</b><span>Premium y reemplazo</span></div>
+          </article>
+          <article class="product-card reveal">
+            <img src="assets/img/embedded/img-007.jpg" alt="Balatas cerámicas">
+            <div><b>Balatas cerámicas</b><span>Confort y respuesta</span></div>
+          </article>
+          <article class="product-card reveal">
+            <img src="assets/img/embedded/img-008.jpg" alt="Discos ranurados">
+            <div><b>Discos ranurados</b><span>Mayor desempeño térmico</span></div>
+          </article>
+          <article class="product-card reveal">
+            <img src="assets/img/embedded/img-009.jpg" alt="Discos perforados">
+            <div><b>Discos perforados</b><span>Performance</span></div>
+          </article>
+          <article class="product-card reveal">
+            <img src="assets/img/embedded/img-010.png" alt="Refacciones para frenos">
+            <div><b>Refacciones</b><span>Amplia cobertura</span></div>
+          </article>
+          <a class="btn btn-outline product-cta" href="https://wa.me/525636360162?text=Hola%20BREMSENRC,%20quiero%20consultar%20disponibilidad." target="_blank">Consultar disponibilidad</a>
+        </div>
+
+        <aside class="premium-card reveal">
+          <div class="premium-copy">
+            <span class="kicker">GAMA PREMIUM</span>
+            <h3>LLEVA TU FRENADO AL <em>SIGUIENTE NIVEL</em></h3>
+            <ul>
+              <li>Discos perforados y ranurados</li>
+              <li>Balatas cerámicas</li>
+              <li>Componentes performance</li>
+              <li>Opciones para vehículos deportivos y premium</li>
+            </ul>
+            <a class="btn btn-red" href="https://wa.me/525519529261?text=Hola%20BREMSENRC,%20quiero%20mejorar%20el%20frenado%20de%20mi%20veh%C3%ADculo." target="_blank">Quiero mejorar mis frenos</a>
+          </div>
+          <img src="assets/img/embedded/img-011.png" alt="Freno premium instalado">
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  
+<section class="product-campaign section" id="catalogo-visual">
+  <div class="wrap">
+    <div class="split-head">
+      <h2>PRODUCTOS DESTACADOS</h2>
+      <span class="red-line"></span>
+    </div>
+    <p class="product-campaign-intro">Soluciones para diferentes sistemas de frenado, desde mantenimiento diario hasta opciones de mayor desempeño.</p>
+
+    <div class="product-campaign-grid">
+      <article class="campaign-card">
+        <img src="assets/img/balata-premium.png" alt="Balatas de freno BREMSENRC">
+        <div class="campaign-card-copy"><b>Balatas</b><span>Frenado confiable y respuesta consistente</span></div>
+      </article>
+
+      <article class="campaign-card">
+        <img src="assets/img/disco-normal.png" alt="Disco de freno normal BREMSENRC">
+        <div class="campaign-card-copy"><b>Disco de freno</b><span>Reemplazo de uso diario</span></div>
+      </article>
+
+      <article class="campaign-card campaign-featured">
+        <img src="assets/img/disco-hiperventilado.png" alt="Disco hiperventilado BREMSENRC">
+        <div class="campaign-card-copy"><b>Disco hiperventilado</b><span>Mayor capacidad de disipación y desempeño</span></div>
+      </article>
+
+      <article class="campaign-card">
+        <img src="assets/img/disco-ranurado.png" alt="Disco ranurado BREMSENRC">
+        <div class="campaign-card-copy"><b>Disco ranurado</b><span>Opción performance</span></div>
+      </article>
+
+      <article class="campaign-card">
+        <img src="assets/img/liquido-trw-900ml.png" alt="Líquido de frenos TRW 900 ml">
+        <div class="campaign-card-copy"><b>Líquido TRW 900 ml</b><span>DOT 4 para sistemas de freno</span></div>
+      </article>
+
+      <article class="campaign-card">
+        <img src="assets/img/sensor-desgaste.png" alt="Sensor de desgaste de balata">
+        <div class="campaign-card-copy"><b>Sensor de desgaste</b><span>Monitoreo del desgaste de balatas</span></div>
+      </article>
+
+      <article class="campaign-card">
+        <img src="assets/img/tambor-freno.png" alt="Tambor de freno trasero">
+        <div class="campaign-card-copy"><b>Tambor de freno</b><span>Aplicaciones de freno trasero</span></div>
+      </article>
+
+      <article class="campaign-card">
+        <img src="assets/img/zapata-freno.png" alt="Zapata de freno">
+        <div class="campaign-card-copy"><b>Zapata de freno</b><span>Componentes para sistema de tambor</span></div>
+      </article>
+    </div>
+
+    <div class="campaign-cta">
+      <div>
+        <span class="kicker">¿BUSCAS UNA APLICACIÓN ESPECÍFICA?</span>
+        <h3>ENVÍANOS MARCA, MODELO, AÑO Y VERSIÓN</h3>
+      </div>
+      <a class="btn btn-red" target="_blank" href="https://wa.me/525519529261?text=Hola%20BREMSENRC,%20quiero%20consultar%20una%20refacci%C3%B3n%20para%20mi%20veh%C3%ADculo.">Consultar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section services" id="servicios">
+    <div class="wrap">
+      <div class="split-head">
+        <h2>SERVICIOS ESPECIALIZADOS</h2>
+        <span class="red-line"></span>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <img src="assets/img/embedded/img-012.jpg" alt="Servicio de frenos">
+          <div><b>Frenos</b><span>Venta, revisión e instalación</span></div>
+        </article>
+        <article class="service-card reveal">
+          <img src="assets/img/embedded/img-013.jpg" alt="Afinaciones">
+          <div><b>Afinaciones</b><span>Mantenimiento preventivo</span></div>
+        </article>
+        <article class="service-card reveal">
+          <img src="assets/img/embedded/img-014.jpg" alt="Suspensión">
+          <div><b>Suspensión</b><span>Revisión y servicio</span></div>
+        </article>
+        <article class="service-card reveal">
+          <img src="assets/img/embedded/img-015.jpg" alt="Embrague">
+          <div><b>Embrague</b><span>Servicio especializado</span></div>
+        </article>
+        <article class="service-card reveal">
+          <img src="assets/img/embedded/img-016.jpg" alt="Rectificado">
+          <div><b>Rectificado</b><span>Discos, tambores y volantes</span></div>
+        </article>
+        <article class="service-card reveal">
+          <img src="assets/img/embedded/img-017.jpg" alt="Servicio a domicilio">
+          <div><b>Servicio a domicilio</b><span>Consulta disponibilidad</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  
+  <section class="brands brands-v42" id="marcas">
+    <div class="wrap">
+      <div class="split-head mini">
+        <h2>TRABAJAMOS CON MARCAS ESPECIALIZADAS</h2>
+        <span class="red-line"></span>
+      </div>
+      <div class="brand-logo-row reveal">
+        <div class="brand-logo brand-brembo"><img src="assets/img/embedded/img-018.png" alt="Brembo"></div>
+        <div class="brand-logo brand-ebc"><img src="assets/img/embedded/img-019.png" alt="EBC Brakes"></div>
+        <div class="brand-logo brand-textar"><img src="assets/img/embedded/img-020.png" alt="Textar"></div>
+        <div class="brand-logo brand-akebono"><img src="assets/img/embedded/img-021.png" alt="Akebono"></div>
+        <div class="brand-logo brand-best"><img src="assets/img/embedded/img-022.png" alt="Best Brakes"></div>
+        <div class="brand-logo brand-fricco"><img src="assets/img/embedded/img-023.png" alt="Fricco Brakes"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROVEEDORES -->
+  <section class="section providers" id="proveedores">
+    <div class="wrap">
+      <div class="provider-head reveal">
+        <div>
+          <span class="kicker">PROVEEDORES DESTACADOS</span>
+          <h2>INVENTARIO QUE <em>RESPALDA</em></h2>
+        </div>
+        <p>Una sección enfocada en mostrar la fuerza de inventario y disponibilidad de FRICCO y Best Brakes.</p>
+      </div>
+
+      <div class="provider-grid">
+        <article class="provider-card reveal">
+          <img src="assets/img/embedded/img-024.jpg" alt="Inventario FRICCO">
+          <div class="provider-overlay">
+            <img class="provider-brand-logo fricco-provider-logo" src="assets/img/embedded/img-025.png" alt="FRICCO Brakes"><span>FRICCO RACING</span>
+            <h3>DISCOS PERFORMANCE</h3>
+            <p>Perforados, ranurados y soluciones de alto desempeño.</p>
+          </div>
+        </article>
+        <article class="provider-card reveal">
+          <img src="assets/img/embedded/img-026.jpg" alt="Inventario Best Brakes">
+          <div class="provider-overlay">
+            <img class="provider-brand-logo best-provider-logo" src="assets/img/embedded/img-027.png" alt="Best Brakes BD"><span>BEST BRAKES</span>
+            <h3>AMPLIA COBERTURA</h3>
+            <p>Balatas y discos para múltiples aplicaciones.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="provider-mini-grid">
+        <figure class="reveal"><img src="assets/img/embedded/img-028.jpg" alt="Almacén FRICCO"></figure>
+        <figure class="reveal"><img src="assets/img/embedded/img-029.jpg" alt="Tarimas de mercancía"></figure>
+        <figure class="reveal"><img src="assets/img/embedded/img-030.jpg" alt="Logística de producto"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALLER -->
+  <section class="section workshop" id="taller">
+    <div class="wrap">
+      <div class="split-head">
+        <h2>NUESTRO TALLER</h2>
+        <span class="red-line"></span>
+      </div>
+      <div class="work-grid">
+        <figure class="work-big reveal"><img src="assets/img/embedded/img-031.jpg" alt="Sucursal BREMSENRC"></figure>
+        <figure class="reveal"><img src="assets/img/embedded/img-032.jpg" alt="Mecánico trabajando"></figure>
+        <figure class="reveal"><img src="assets/img/embedded/img-033.jpg" alt="SUV en servicio"></figure>
+        <figure class="reveal"><img src="assets/img/embedded/img-034.jpg" alt="Interior de BREMSENRC"></figure>
+        <figure class="reveal"><img src="assets/img/embedded/img-035.jpg" alt="Instalación de discos"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACION -->
+  
+  <section class="location location-v43" id="ubicacion">
+    <div class="wrap">
+      <div class="location-v43-head reveal">
+        <div>
+          <span class="kicker">SUCURSAL CDMX</span>
+          <h2>ENCUÉNTRANOS EN <em>ARAGÓN LA VILLA</em></h2>
+        </div>
+        <p>Taller mecánico y especialista en frenos. Atención a particulares y talleres.</p>
+      </div>
+
+      <div class="location-v43-grid">
+        <article class="location-v43-card location-v43-main reveal">
+          <div class="location-v43-label">BREMSENRC CDMX</div>
+          <h3>Moctezuma 47</h3>
+          <p>Col. Aragón La Villa, Gustavo A. Madero<br>CDMX, C.P. 07000</p>
+
+          <div class="location-v43-contact">
+            <a href="tel:+525519529261">
+              <span>Teléfono / WhatsApp</span>
+              <b>55 1952 9261</b>
+            </a>
+            <a href="https://wa.me/525636360162" target="_blank">
+              <span>WhatsApp adicional</span>
+              <b>56 3636 0162</b>
+            </a>
+          </div>
+
+          <div class="location-v43-actions">
+            <a class="btn btn-red" href="https://share.google/ycqjuLLhKNkPNMO3l" target="_blank">Abrir en Google Maps</a>
+            <a class="btn btn-outline" href="tel:+525519529261">Llamar</a>
+          </div>
+        </article>
+
+        <article class="location-v43-card location-v43-hours reveal">
+          <div class="location-v43-label">HORARIOS</div>
+          <div class="schedule-row">
+            <div><span>Lunes a viernes</span><small>Atención general</small></div>
+            <b>9:00 AM – 6:00 PM</b>
+          </div>
+          <div class="schedule-row">
+            <div><span>Sábado</span><small>Atención general</small></div>
+            <b>9:00 AM – 3:00 PM</b>
+          </div>
+          <div class="schedule-row sunday">
+            <div><span>Domingo</span><small>Solo venta de refacciones</small></div>
+            <b>10:00 AM – 2:00 PM</b>
+          </div>
+          <div class="open-note">
+            <span></span>
+            Atención directa en sucursal CDMX
+          </div>
+        </article>
+
+        <article class="location-v43-map reveal">
+          <iframe
+            title="BREMSENRC CDMX en Google Maps"
+            src="https://www.google.com/maps?q=Moctezuma%2047%2C%20Arag%C3%B3n%20La%20Villa%2C%20Gustavo%20A.%20Madero%2C%20CDMX%2007000&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="location-v43-mapbar">
+            <div>
+              <b>BREMSENRC CDMX</b>
+              <span>Moctezuma 47 · Aragón La Villa</span>
+            </div>
+            <a href="https://share.google/ycqjuLLhKNkPNMO3l" target="_blank">Cómo llegar →</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="location-v43-bottom reveal">
+        <div><b>FRENOS</b><span>Venta e instalación</span></div>
+        <div><b>TALLER MECÁNICO</b><span>Afinación, suspensión y embrague</span></div>
+        <div><b>RECTIFICADO</b><span>Discos, tambores y volantes</span></div>
+        <div><b>SERVICIO A DOMICILIO</b><span>Consulta disponibilidad</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- REDES -->
+  <section class="section socials" id="contacto">
+    <div class="wrap">
+      <div class="split-head">
+        <h2>SÍGUENOS EN REDES</h2>
+        <span class="red-line"></span>
+      </div>
+      <div class="social-row">
+        <a class="social-box reveal" href="https://www.instagram.com/bremsen_frenos/" target="_blank">
+          <div><b>Instagram</b><span>@bremsen_frenos</span></div>
+          <div class="social-thumbs">
+            <img src="assets/img/embedded/img-036.jpg" alt="">
+            <img src="assets/img/embedded/img-037.jpg" alt="">
+            <img src="assets/img/embedded/img-038.jpg" alt="">
+          </div>
+        </a>
+        <a class="social-box reveal" href="https://www.tiktok.com/@bremsen.rc.cdmx?is_from_webapp=1&sender_device=pc" target="_blank">
+          <div><b>TikTok</b><span>@bremsen.rc.cdmx</span></div>
+          <div class="social-thumbs">
+            <img src="assets/img/embedded/img-039.jpg" alt="">
+            <img src="assets/img/embedded/img-040.jpg" alt="">
+            <img src="assets/img/embedded/img-041.jpg" alt="">
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta">
+    <div class="wrap final-grid">
+      <div class="reveal">
+        <h2>¿NECESITAS <em>FRENOS</em> PARA TU VEHÍCULO?</h2>
+        <p>Envíanos marca, modelo, año, versión y el servicio o refacción que necesitas.</p>
+      </div>
+      <div class="final-actions reveal">
+        <a class="btn btn-red btn-large" href="https://wa.me/525519529261?text=Hola%20BREMSENRC.%20Quiero%20cotizar.%20Mi%20veh%C3%ADculo%20es:%20" target="_blank">Cotizar ahora por WhatsApp</a>
+        <a class="btn btn-outline" href="https://wa.me/525636360162" target="_blank">Segundo WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <img src="assets/img/embedded/img-042.png" alt="BREMSENRC">
+    <div><b>Empresa</b><a href="#taller">Nosotros</a><a href="#servicios">Servicios</a><a href="#productos">Productos</a></div>
+    <div><b>Información</b><a href="#ubicacion">Ubicación</a><a href="#ubicacion">Horarios</a><a href="#contacto">Contacto</a></div>
+    <div><b>Síguenos</b><a href="https://www.instagram.com/bremsen_frenos/" target="_blank">Instagram</a><a href="https://www.tiktok.com/@bremsen.rc.cdmx?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a></div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 BREMSENRC FRENOS S.A. DE C.V.</div>
+</footer>
+
+<a class="floating-wa" href="https://wa.me/525519529261" target="_blank" aria-label="WhatsApp">WA</a>
+<script>
+
+const menuBtn=document.querySelector('.menuBtn');
+const menu=document.querySelector('.menu');
+menuBtn?.addEventListener('click',()=>menu.classList.toggle('open'));
+document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}
+  })
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const anchors=[...document.querySelectorAll('.menu a')];
+const sections=[...document.querySelectorAll('main section[id], header[id]')];
+window.addEventListener('scroll',()=>{
+  let current='inicio';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-130) current=s.id});
+  anchors.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===`#${current}`));
+});
+
+</script>
+</body>
+</html>
