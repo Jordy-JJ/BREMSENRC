@@ -920,6 +920,69 @@ footer .footer-brand img{
 }
 </style>
 
+
+<style>
+/* ===== FIX SALA DE ESPERA - IMAGEN COMPLETA ===== */
+.waiting-room,
+.sala-espera,
+.waiting-room-section,
+.sala-espera-section{
+  overflow:visible !important;
+}
+
+.waiting-room img,
+.sala-espera img,
+.waiting-room-section img,
+.sala-espera-section img,
+img[alt*="Sala de espera"],
+img[alt*="sala de espera"],
+img[src*="sala_de_espera"]{
+  width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  display:block !important;
+  aspect-ratio:auto !important;
+}
+
+/* If the waiting-room section was built as a background image/card */
+.waiting-room .image,
+.sala-espera .image,
+.waiting-room-media,
+.sala-espera-media{
+  height:auto !important;
+  min-height:0 !important;
+  overflow:visible !important;
+  background-size:contain !important;
+  background-position:center center !important;
+  background-repeat:no-repeat !important;
+}
+
+/* Keep the whole promo comfortably visible */
+@media (min-width: 981px){
+  .waiting-room img,
+  .sala-espera img,
+  .waiting-room-section img,
+  .sala-espera-section img,
+  img[alt*="Sala de espera"],
+  img[alt*="sala de espera"],
+  img[src*="sala_de_espera"]{
+    max-width:100% !important;
+  }
+}
+
+@media (max-width: 980px){
+  .waiting-room,
+  .sala-espera,
+  .waiting-room-section,
+  .sala-espera-section{
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+}
+</style>
+
 </head>
 <body style="margin:0;background:#000;color:#fff;">
 
